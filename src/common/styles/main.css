@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+@import './utilities.css';
+@import './components/general.css';
+@import './components/StdInput.css';
+@import './components/StdButton.css';
+@import './components/timeline.css';
+@import './pages/find.css';
+
+:root {
+    --scrollbarWidth: 12px;
+    --scrollbarBg: hsl(221.3, 14.8%, 15%);
+    --scrollbarThumb: hsl(219, 14.1%, 27.8%);
+}
+
+body {
+    scrollbar-width: var(--scrollbarWidth);
+    scrollbar-color: var(--scrollbarThumb) var(--scrollbarBg);
+}
+
+body::-webkit-scrollbar {
+    width: var(--scrollbarWidth);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBg);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbarThumb);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBg);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+option[disabled] {
+    color: gray !important;
+}

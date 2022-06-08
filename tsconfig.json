@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/public/*": [
+        "public/*"
+      ],
+      "@/components/*": [
+        "src/common/components/*"
+      ],
+      "@/static/*": [
+        "src/common/static/*"
+      ],
+      "@/hooks/*": [
+        "src/common/hooks/*"
+      ],
+      "@/domains/*": [
+        "src/common/redux/domains/*"
+      ],
+      "@/services/*": [
+        "src/common/redux/services/*"
+      ],
+      "@/styles/*": [
+        "src/common/styles/*"
+      ],
+      "@/types/*": [
+        "src/common/types/*"
+      ],
+      "@/pages/*": [
+        "src/pages/*"
+      ]
+    },
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "incremental": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "public"
+  ]
+}

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .filter-menu-column {
+        @apply p-2 w-1/4 flex flex-col justify-around;
+    }
+}

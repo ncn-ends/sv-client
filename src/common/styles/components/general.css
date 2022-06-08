@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .centered {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .fade-down-banner {
+        background-image: linear-gradient(to bottom, rgba(61, 68, 81, 0) 82%, rgba(61, 68, 81, 1));
+    }
+
+    .fade-down-base {
+        background-image: linear-gradient(
+                to bottom,
+                hsl(219, 14.1%, 27.8%) 40%,
+                hsl(221.3, 14.8%, 12%)
+        );
+        z-index: -100;
+    }
+
+    .bg-faded {
+        background: linear-gradient(to bottom right, rgba(64, 64, 64, .9), rgba(8, 8, 8, .95));
+        box-shadow: 0 0 15px 3px rgba(32, 32, 32, .8);
+    }
+
+    .link {
+        text-decoration: none;
+        @apply text-blue-200 hover:text-green-200;
+    }
+
+    .section_title {
+        @apply uppercase tracking-wider italic text-base mb-2;
+    }
+
+    .input-styles {
+        @apply bg-base-200 rounded-sm shadow-inner text-gray-500 focus:text-gray-200;
+
+        &::-webkit-input-placeholder,
+        &:-moz-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder {
+            font-style: italic;
+            @apply text-sm;
+        }
+    }
+
+    .body-panel {
+        width: min(60rem, 97vw);
+        margin: 0 auto;
+
+        & h1 {
+            color: blue;
+        }
+    }
+
+    .BuildWindowContainer {
+        @apply absolute w-full bg-base-300 opacity-95 bottom-full drop-shadow-md border-t-2 border-l-2 border-r-2 border-black cursor-default;
+    }
+
+    .BigModal {
+        @apply w-96 h-96 bg-red-700 absolute
+    }
+
+    .expanding-underline:after {
+        display: block;
+        content: '';
+        @apply border-b-2 border-gray-700;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+    }
+
+    .underline-expanded:after {
+        transform: scaleX(1);
+    }
+
+    /* --- BEGINNING OF REFACTORING --- */
+    .disclaimer-text {
+        @apply text-3xs text-gray-400 text-center w-full;
+    }
+}

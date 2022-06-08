@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* base styles, used by every version of std button component */
+    .std-button {
+        @apply flex flex-col h-8 items-center justify-end duration-200 rounded-sm uppercase cursor-pointer mx-[3px];
+        @apply hover:text-yellow-400;
+    }
+}
+
+@layer components {
+    /* Version used for actions, such as clicking "save" in /find page */
+    .std-button-action {
+        @apply std-button;
+        @apply text-2xs bg-gray-700 border-yellow-500 w-24 border-1;
+        @apply active:shadow-inner-md;
+    }
+
+    /* Version used for big actions, such as clicking "saved searches" in /find page */
+    .std-button-action-notable {
+        @apply std-button-action;
+        @apply w-full py-1;
+
+        /* for label */
+        @apply tracking-widest text-sm hover:text-md;
+    }
+
+    .std-button-selection {
+        @apply std-button;
+        @apply min-w-[4rem] font-medium drop-shadow-2xl;
+
+        background-repeat: no-repeat;
+        background-size: 4rem;
+        background-position: center;
+
+        &:hover {
+            background-size: 5rem;
+        }
+
+        &.active {
+            @apply bg-green-600;
+        }
+
+        &.disabled {
+            @apply bg-red-800;
+        }
+
+        &.neutral {
+            @apply bg-gray-700;
+        }
+    }
+
+    .std-button-selection-background {
+
+    }
+}

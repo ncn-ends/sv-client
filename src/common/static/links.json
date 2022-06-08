@@ -1,0 +1,15 @@
+{
+  "icons": {
+    "protoss": "https://i.imgur.com/wd1DEUy.png",
+    "zerg": "https://i.imgur.com/rMHQUL1.png",
+    "terran": "https://i.imgur.com/7mSqrk5.png"
+  },
+  "backgrounds": {
+    "zerg_battle": "https://i.imgur.com/5CfxTQ8.jpg"
+  },
+  "sigils": {
+    "protoss": "https://i.imgur.com/MC1Q1L6.png",
+    "zerg": "https://i.imgur.com/WYyMrl7.png",
+    "terran": "https://i.imgur.com/cCc3OQK.png"
+  }
+}

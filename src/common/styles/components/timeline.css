@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .timeline-line {
+        @apply border-l-2 p-0 border-r-2 border-gray-800;
+        height: 200vh;
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+
+    .timeline-triangle {
+        clip-path: polygon(50% 0, 100% 100%, 50% 73%, 0 100%);
+        @apply w-6 h-6 absolute top-[-1rem] bg-gray-800 left-1/2 translate-x-[-50%];
+        @apply md:w-8 md:h-8;
+    }
+
+    .timeline-card {
+        /*
+         * Note: the `top` property is calculated at runtime 
+         * via javascript in the TimelineCard component
+        */
+        @apply bg-gray-800 py-2 px-4 rounded-sm w-full fade-in-with-scroll absolute shadow-lg mt-4;
+        @apply md:max-w-[45%] w-[unset];
+        @media screen(md) {
+            left: calc(50% + min(3vw, 2rem));
+        }
+
+        & h4 {
+            @apply text-sm uppercase tracking-wider;
+        }
+
+        & h5 {
+            @apply text-sm my-1 italic text-gray-400;
+        }
+
+        & li {
+            @apply text-xs list-disc ml-4;
+            @apply md:ml-4;
+            overflow-wrap: break-word;
+        }
+    }
+
+    .timeline-card:nth-child(even) {
+        left: unset;
+        @media screen(md) {
+            right: calc(50% + min(3vw, 2rem));
+        }
+    }
+}

@@ -1,0 +1,5 @@
+const initialLoad = () => {
+
+}
+
+export { initialLoad };
